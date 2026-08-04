@@ -36,10 +36,7 @@ if (string.IsNullOrWhiteSpace(userName))
         {
             Console.WriteLine("Ugyldig valg... Prøv igjen...");
         }
-        functions.GreetingText(userName);
     }
 }
-else
-{
-    functions.GreetingText(userName);
-}
+
+functions.GreetingText(userName);
