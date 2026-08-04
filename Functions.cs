@@ -5,14 +5,14 @@ public class Functions
     public void ClockOfDay()
     {
         DateTime clockNow = DateTime.Now;
-
-        Console.WriteLine($"Klokken er: {clockNow:HH:mm}");
+        Console.WriteLine($"Dato: {clockNow:dd.MM.yyyy}");
+        Console.WriteLine($"Klokken: {clockNow:HH:mm}");
     }
 
     public void GreetingText(string userName)
     {
         int hour = DateTime.Now.Hour;
-        string greeting = "";
+        string greeting;
 
         if (hour >= 6 && hour < 10)
             greeting = "God morgen";
