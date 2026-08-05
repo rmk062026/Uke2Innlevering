@@ -1,6 +1,6 @@
 ﻿using Uke2Innlevering;
 Functions functions = new Functions();
-functions.DisplayDateTime();
+// functions.DisplayDateTime();
 Console.WriteLine("===============================");
 Console.WriteLine("Min innleverings oppgave");
 Console.WriteLine("===============================\n");
@@ -8,6 +8,7 @@ Console.WriteLine("Skriv ditt navn:\n");
 
 string userName = Console.ReadLine() ?? "";
 
+// If user's name is null, then while loop will activate and the user will get the menu choices
 while (string.IsNullOrWhiteSpace(userName))
 {
     Console.WriteLine("Navnet kan ikke være tomt.");
@@ -32,5 +33,6 @@ while (string.IsNullOrWhiteSpace(userName))
         Console.WriteLine("Ugyldig valg... Prøv igjen...");
     }
 }
+
 Console.WriteLine($"{functions.GetGreeting()}, {userName}. " + $"I dag er det den {functions.GetDate()} og klokken er {functions.GetTime()}.");
 //functions.ShowGreeting(userName);

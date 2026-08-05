@@ -2,12 +2,12 @@
 
 public class Functions
 {
-    public void DisplayDateTime()
-    {
-        DateTime clockNow = DateTime.Now;
-        Console.WriteLine($"Dato: {clockNow:dd.MM.yyyy}");
-        Console.WriteLine($"Klokken: {clockNow:HH:mm}");
-    }
+    // public void DisplayDateTime()
+    // {
+    //     DateTime clockNow = DateTime.Now;
+    //     Console.WriteLine($"Dato: {clockNow:dd.MM.yyyy}");
+    //     Console.WriteLine($"Klokken: {clockNow:HH:mm}");
+    // }
     public string GetDate()
     {
         return DateTime.Now.ToString("dd.MM.yyyy");
