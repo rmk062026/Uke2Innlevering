@@ -26,4 +26,22 @@ public class Functions
         else
             return "God natt";
     }
+
+    public string GetMessageOfDay()
+    {
+        Dictionary<DayOfWeek, string> dayMessage =
+        new Dictionary<DayOfWeek, string>()
+        {
+            {DayOfWeek.Monday, "Ha en fin Mandag"},
+            {DayOfWeek.Tuesday, "Nyt Tirsdagen"},
+            {DayOfWeek.Wednesday, "Halveis til helg nå. Ha en fin Onsdag"},
+            {DayOfWeek.Thursday, "Straks helg."},
+            {DayOfWeek.Friday, "Idag er det endelig Fredag. Nyt helgen!"},
+            {DayOfWeek.Saturday, "Lørdagssnop"},
+            {DayOfWeek.Sunday, "Slapp av idag. Nyt Søndagen før uken begynner igjen."}
+        };
+        DayOfWeek today = currentDateTime.DayOfWeek;
+
+        return dayMessage[today];
+    }
 }

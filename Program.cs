@@ -34,4 +34,4 @@ while (string.IsNullOrWhiteSpace(userName))
     }
 }
 
-Console.WriteLine($"{functions.GetGreeting()}, {userName}. I dag er det {functions.GetDate()} og klokken er {functions.GetTime()}.");
+Console.WriteLine($"{functions.GetGreeting()}, {userName}.\nI dag er det {functions.GetDate()} og klokken er {functions.GetTime()}.\n{functions.GetMessageOfDay()} :)");
