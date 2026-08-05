@@ -1,18 +1,15 @@
 ﻿using Uke2Innlevering;
-// bool programRunning = true;
-// bool userNameEmpty = true;
 Functions functions = new Functions();
-functions.ClockOfDay();
-Console.WriteLine("Min innleverings oppgave\n");
-Console.WriteLine();
-Console.WriteLine("*********************");
-Console.WriteLine("Skriv ditt navn:");
+functions.DisplayDateTime();
+Console.WriteLine("===============================");
+Console.WriteLine("Min innleverings oppgave");
+Console.WriteLine("===============================\n");
+Console.WriteLine("Skriv ditt navn:\n");
 
 string userName = Console.ReadLine() ?? "";
 
 while (string.IsNullOrWhiteSpace(userName))
 {
-    Console.WriteLine("");
     Console.WriteLine("Navnet kan ikke være tomt.");
     Console.WriteLine("1. Skriv navnet på nytt.");
     Console.WriteLine("2. Avslutt programmet.");
@@ -35,5 +32,5 @@ while (string.IsNullOrWhiteSpace(userName))
         Console.WriteLine("Ugyldig valg... Prøv igjen...");
     }
 }
-
-functions.GreetingText(userName);
+Console.WriteLine($"{functions.GetGreeting()}, {userName}. " + $"I dag er det den {functions.GetDate()} og klokken er {functions.GetTime()}.");
+//functions.ShowGreeting(userName);
