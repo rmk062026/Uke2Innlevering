@@ -11,7 +11,6 @@ public class Functions
     {
         return currentDateTime.ToString("HH:mm");
     }
-
     public string GetGreeting()
     {
         int hour = currentDateTime.Hour;
@@ -26,7 +25,6 @@ public class Functions
         else
             return "God natt";
     }
-
     public string GetMessageOfDay()
     {
         Dictionary<DayOfWeek, string> dayMessage =
@@ -41,7 +39,6 @@ public class Functions
             {DayOfWeek.Sunday, "Slapp av idag. Nyt Søndagen før uken begynner igjen."}
         };
         DayOfWeek today = currentDateTime.DayOfWeek;
-
         return dayMessage[today];
     }
 }
